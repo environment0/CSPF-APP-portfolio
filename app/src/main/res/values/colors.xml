@@ -1,0 +1,58 @@
+<resources>
+    <!-- Base Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Theme Colors -->
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorAccent">#666666</color>
+
+    <!-- Additional Theme Colors -->
+    <color name="primary_color">#000000</color>
+    <color name="primary_dark">#333333</color>
+    <color name="accent_color">#666666</color>
+
+    <!-- Background Colors -->
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="background_color">#F7F7F7</color>
+    <color name="colorBackground">#F5F5F5</color>
+
+    <!-- Text Colors -->
+    <color name="textColor">#000000</color>
+    <color name="title_color">#000000</color>
+    <color name="secondaryText">#757575</color>
+    <color name="secondary_text">#757575</color>
+    <color name="hintColor">#888888</color>
+
+    <!-- Button Colors -->
+    <color name="buttonColor">#000000</color>
+    <color name="buttonPressed">#333333</color>
+    <color name="buttonDisabled">#CCCCCC</color>
+    <color name="colorSelected">#E0E0E0</color>
+    <color name="colorPressed">#CCCCCC</color>
+    <color name="colorDefault">#000000</color>
+
+    <!-- UI Elements -->
+    <color name="dividerColor">#E0E0E0</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="shimmer_color">#DDDDDD</color>
+    <!-- Additional UI Colors -->
+    <color name="cardBackground">@color/white</color>
+    <color name="shadowColor">#12000000</color>
+    <color name="rippleColor">#1A000000</color>
+    <color name="searchBackground">@color/background_color</color>
+
+    <!-- Status Colors -->
+    <color name="successColor">@color/black</color>
+    <color name="errorColor">@color/black</color>
+    <color name="warningColor">@color/black</color>
+    <color name="infoColor">@color/black</color>
+    <color name="disabledColor">@color/buttonDisabled</color>
+
+    <!-- Border Colors -->
+    <color name="borderColor">@color/dividerColor</color>
+    <color name="borderFocused">@color/black</color>
+    <color name="borderError">@color/black</color>
+</resources>

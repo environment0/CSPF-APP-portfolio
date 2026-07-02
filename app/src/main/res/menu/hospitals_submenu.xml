@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_nearby_hospitals"
+        android:title="주변 동물 병원 찾기" />
+    <item
+        android:id="@+id/nav_partner_hospitals"
+        android:title="협력업체 병원 리스트" />
+</menu>

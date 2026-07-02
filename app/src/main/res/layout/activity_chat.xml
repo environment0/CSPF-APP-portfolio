@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#000000">
+
+    <!-- 상단 버튼 컨테이너 -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="#1A1A1A">
+
+        <!-- 변호사 상담 예약 버튼 -->
+        <Button
+            android:id="@+id/lawyerBookingButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="변호사 상담"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#333333"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="4dp"
+            android:textSize="14sp" />
+
+        <!-- 동물 보험 버튼 -->
+        <Button
+            android:id="@+id/insuranceButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="동물 보험"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#333333"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="4dp"
+            android:textSize="14sp" />
+
+        <!-- 병원 예약 버튼 -->
+        <Button
+            android:id="@+id/btnInsurance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="병원 예약"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#333333"
+            android:padding="12dp"
+            android:elevation="4dp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Progress Indicator -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonContainer"
+        android:layout_marginBottom="8dp"
+        android:visibility="visible"
+        app:indicatorColor="#FFFFFF"
+        app:trackColor="#333333" />
+
+    <!-- Chat ScrollView -->
+    <ScrollView
+        android:id="@+id/chatScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/inputContainer"
+        android:layout_below="@id/progressIndicator"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/chatContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" />
+    </ScrollView>
+
+    <!-- 입력 영역 -->
+    <LinearLayout
+        android:id="@+id/inputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:background="#1A1A1A">
+
+        <EditText
+            android:id="@+id/messageInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="메시지를 입력하세요"
+            android:textColorHint="#757575"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:backgroundTint="#333333"
+            android:imeOptions="actionSend"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전송"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#333333"
+            android:elevation="4dp" />
+    </LinearLayout>
+</RelativeLayout>

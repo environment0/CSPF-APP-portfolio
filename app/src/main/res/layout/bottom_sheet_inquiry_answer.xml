@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+<!--문의사항 답변-->
+    <TextView
+        android:id="@+id/bottom_sheet_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="문의 내용"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/bottom_sheet_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="답변 내용"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/bottom_sheet_close_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="닫기"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

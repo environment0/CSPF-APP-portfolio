@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"> <!-- 배경색 흰색 -->
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="채팅방 목록"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="#F5F5F5" /> <!-- 타이틀 배경 밝은 회색 -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" /> <!-- 구분선 색상 밝은 회색 -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChatRooms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:background="#FFFFFF" /> <!-- RecyclerView 배경 흰색 -->
+</LinearLayout>

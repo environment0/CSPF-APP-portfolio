@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⦁ 수술비: 1회당 150만원 한도"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⦁ 입원비: 1일당 15만원 한도"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⦁ 통원비: 1회당 15만원 한도"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⦁ 배상책임: 사고당 1,000만원 한도"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⦁ 장례비: 15만원 정액"
+        android:textSize="14sp"
+        android:textColor="#666666"/>
+</LinearLayout>

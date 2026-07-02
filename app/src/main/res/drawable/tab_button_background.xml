@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 선택된 상태일 때 색상 -->
+    <item android:state_selected="true" android:drawable="@color/colorSelected" />
+
+    <!-- 눌린 상태일 때 색상 -->
+    <item android:state_pressed="true" android:drawable="@color/colorPressed" />
+
+    <!-- 기본 상태일 때 색상 -->
+    <item android:drawable="@color/colorDefault" />
+</selector>

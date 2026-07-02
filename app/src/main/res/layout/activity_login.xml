@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:padding="24dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:letterSpacing="0.15"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그인을 하시면 다양한 혜택을 누리실 수 있습니다."
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="아이디"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="#000000"
+            app:hintTextColor="#000000"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:textSize="16sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="#000000"
+            app:hintTextColor="#000000"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#000000"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textSize="16sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="로그인"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:backgroundTint="#000000"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonExpertLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="전문가 전용 로그인"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:backgroundTint="#404040"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="32dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:id="@+id/buttonFindPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호 찾기"
+                android:textColor="#757575"
+                android:layout_marginEnd="24dp"/>
+
+            <TextView
+                android:id="@+id/buttonSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원가입"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SNS 로그인"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:layout_marginHorizontal="16dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="32dp">
+
+            <ImageButton
+                android:id="@+id/buttonNaverLogin"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/naver"
+
+                android:layout_marginHorizontal="16dp"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                android:contentDescription="네이버로 로그인"/>
+
+            <ImageButton
+                android:id="@+id/buttonGoogleLogin"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/google_logo"
+
+                android:layout_marginHorizontal="16dp"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                android:contentDescription="구글로 로그인"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonGuest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비회원으로 계속하기"
+            android:textColor="#000000"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:padding="16dp"
+            app:strokeColor="#000000"
+            app:cornerRadius="8dp"/>
+    </LinearLayout>
+</ScrollView>

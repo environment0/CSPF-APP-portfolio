@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_news"
+        android:title="반려동물 뉴스" />
+    <item
+        android:id="@+id/nav_pet_lawyer"
+        android:title="반려동물 변호사" />
+    <item
+        android:id="@+id/nav_insurance"
+        android:title="반려동물 보험" />
+    <item
+        android:id="@+id/nav_hospitals"
+        android:title="동물 병원" />
+    <item
+        android:id="@+id/nav_cases"
+        android:title="반려동물 판례" />
+    <item
+        android:id="@+id/nav_notifications"
+        android:title="공지사항" />
+    <item
+        android:id="@+id/nav_inquiries"
+        android:title="문의사항" />
+    <item
+        android:id="@+id/nav_my_profile"
+        android:title="마이 프로필" />
+
+    <!-- 로그인 메뉴 추가 -->
+    <item
+        android:id="@+id/nav_login"
+        android:title="로그인" />
+</menu>

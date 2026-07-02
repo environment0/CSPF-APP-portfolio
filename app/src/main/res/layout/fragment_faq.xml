@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+<!--자주 묻는 질문 목록-->
+    <!-- FAQ 목록 표시를 위한 RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFAQ"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:letterSpacing="0.1"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원가입을 통해 다양한 서비스를 이용하실 수 있습니다"
+            android:textSize="14sp"
+            android:textColor="@color/dividerColor"
+            android:gravity="center"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- User Type Selection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원 유형"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupUserType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_radio_group"
+            android:padding="4dp"
+            android:layout_marginBottom="32dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonNormalUser"
+                style="@style/Widget.App.RadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="일반회원"
+                android:contentDescription="일반회원으로 가입하기"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonExpertUser"
+                style="@style/Widget.App.RadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="전문직회원"
+                android:contentDescription="전문직 회원으로 가입하기"/>
+        </RadioGroup>
+
+        <!-- Normal User Fields -->
+        <LinearLayout
+            android:id="@+id/normalUserFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!-- Profile Image -->
+            <TextView
+                android:id="@+id/labelNormalProfileImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="프로필 이미지"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/imageNormalProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_image_upload"
+                    android:contentDescription="선택된 프로필 이미지 미리보기"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/imageNormalProfilePlaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_person_outline"
+                    android:padding="32dp"
+                    android:alpha="0.5"/>
+            </FrameLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonUploadNormalProfile"
+                style="@style/Widget.App.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="프로필 이미지 선택"
+                android:contentDescription="프로필 이미지 선택하기"
+                android:layout_marginBottom="32dp"/>
+
+            <!-- Normal User Input Fields -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="아이디"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextNormalUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:contentDescription="일반회원 아이디 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Password Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="비밀번호"
+                app:passwordToggleEnabled="true"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextNormalPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:contentDescription="비밀번호 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Name Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="이름"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextNormalName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:contentDescription="이름 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Nickname Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="닉네임"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextNormalNickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:contentDescription="닉네임 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Email Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="이메일"
+                android:layout_marginBottom="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextNormalEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:contentDescription="이메일 주소 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/labelNormalCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일반 사용자 인증코드 입력"
+                android:visibility="gone"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutNormalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="인증코드"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextNormalCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:contentDescription="이메일로 받은 인증코드 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Verify Code Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonVerifyNormalCode"
+                style="@style/Widget.App.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="입력한 인증코드 검증하기"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Email Verification Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSendNormalCode"
+                style="@style/Widget.App.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="인증코드 발송"
+                android:contentDescription="이메일 인증코드 발송하기"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Address Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="주소"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextNormalAddr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:contentDescription="주소 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Phone Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="전화번호"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextNormalPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:contentDescription="전화번호 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Gender Selection -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="성별"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupNormalGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_radio_group"
+                android:padding="8dp"
+                android:layout_marginBottom="32dp">
+
+                <RadioButton
+                    android:id="@+id/radioButtonMale"
+                    style="@style/Widget.App.RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="M"
+                    android:contentDescription="성별: 남자 선택"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonFemale"
+                    style="@style/Widget.App.RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="W"
+                    android:contentDescription="성별: 여자 선택"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Expert User Fields -->
+        <LinearLayout
+            android:id="@+id/expertFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Expert ID Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="아이디"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextExpertUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:contentDescription="전문가 아이디 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Expert Password Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="비밀번호"
+                app:passwordToggleEnabled="true"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextExpertPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:contentDescription="전문가 비밀번호 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Expert Name Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="이름"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextExpertName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:contentDescription="전문가 이름 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Company Name Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="회사명"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextExpertCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:contentDescription="회사명 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Expert Email Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="이메일"
+                android:layout_marginBottom="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextExpertEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:contentDescription="전문가 이메일 주소 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/labelExpertCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전문가 인증코드 입력"
+                android:visibility="gone"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutExpertCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="인증코드"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextExpertCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:contentDescription="전문가 이메일 인증코드 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonVerifyExpertCode"
+                style="@style/Widget.App.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="인증코드 검증"
+                android:contentDescription="입력한 인증코드 검증하기"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Expert Email Verification Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSendExpertCode"
+                style="@style/Widget.App.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="인증코드 발송"
+                android:contentDescription="전문가 이메일 인증코드 발송하기"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Expert Phone Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="전화번호"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextExpertPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:contentDescription="전문가 전화번호 입력"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Expert Type Selection -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="전문가 유형"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupExpertType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_radio_group"
+                android:padding="8dp"
+                android:layout_marginBottom="24dp">
+
+                <RadioButton
+                    android:id="@+id/radioButtonLawyer"
+                    style="@style/Widget.App.RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="변호사"
+                    android:contentDescription="전문가 유형: 변호사 선택"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonVeterinarian"
+                    style="@style/Widget.App.RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="수의사"
+                    android:contentDescription="전문가 유형: 수의사 선택"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonInsurance"
+                    style="@style/Widget.App.RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="보험사"
+                    android:contentDescription="전문가 유형: 보험사 선택"/>
+            </RadioGroup>
+
+            <!-- Certificate Image Upload -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="자격증 이미지"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <ImageView
+                android:id="@+id/imageCert"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/bg_image_upload"
+                android:scaleType="centerInside"
+                android:contentDescription="선택된 자격증 이미지 미리보기"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonUploadImage"
+                style="@style/Widget.App.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="자격증 이미지 업로드"
+                android:contentDescription="자격증 이미지 선택하기"
+                android:layout_marginBottom="32dp"/>
+        </LinearLayout>
+
+        <!-- Signup Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSignup"
+            style="@style/Widget.App.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textStyle="bold"
+            android:contentDescription="입력한 정보로 회원가입하기"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>
+

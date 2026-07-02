@@ -1,0 +1,136 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 기존 데이터 -->
+    <TextView
+        android:id="@+id/lawyerNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lawyerPhoneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/lawyerEmailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/lawyerCompanyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Company"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/lawyerExperienceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Work Experience"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/lawyerAddressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Company Address"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/lawyerProductTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product"
+        android:layout_marginTop="8dp" />
+
+    <!-- 추가된 데이터 -->
+    <!-- 경력 -->
+    <TextView
+        android:id="@+id/sectionExperienceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="경력"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/lawyerAdditionalExperienceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="반려동물 소유권 분쟁 해결 경험"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/lawyerAdditionalAdviceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="유기동물 구조 및 보호 관련 법률 자문"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 주소 -->
+    <TextView
+        android:id="@+id/sectionAddressTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주소"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/lawyerAdditionalAddressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="경기도 화성시 봉담읍 52-1"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 해당 분야 -->
+    <TextView
+        android:id="@+id/sectionSpecializationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="해당 분야"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/lawyerAdditionalSpecializationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="반려동물 소유권 분쟁, 동물 학대 및 보호 사건"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/lawyerAdditionalInsuranceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="반려동물 보험 및 계약"
+        android:layout_marginBottom="16dp" />
+
+
+    <Button
+        android:id="@+id/btn_chatbot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="예약"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:padding="12dp" />
+</LinearLayout>
