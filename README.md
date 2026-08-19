@@ -1,9 +1,4 @@
 
-CSPF (Pet Family Care Service)
-
-반려동물을 위한 종합 플랫폼
-실시간 상담 · 동물병원 예약 · AI 챗봇 · 채팅 서비스를 제공하는 Android & Web 기반 팀 프로젝트
-
 Project Information
 
 프로젝트 기간	2024.03.04 ~ 2024.11.22
