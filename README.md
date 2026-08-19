@@ -1,5 +1,5 @@
 
-Project Information
+#  Project Information
 
 프로젝트 기간	2024.03.04 ~ 2024.11.22
 장안대학교 소프트웨어융합과 캡스톤디자인 (4인 팀 프로젝트)
